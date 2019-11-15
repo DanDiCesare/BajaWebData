@@ -8,7 +8,7 @@ from tkinter.ttk import *
 
 #change from lap time to passed at: column
 #ignore teams that drop out
-#count laps passed
+#count laps passed / find a way to parse that
 
 def hours(time):
     return int(time[1]) + (int(time[0]) * 10)
@@ -89,8 +89,9 @@ def start(number_of_teams):
 
             try: #sort out missing tables (car did not participate)
                 df_list = pandas.read_html(page) #grab table 
+                print(df_list)
                 df = df_list[-1]   
-                #print(df_list) 
+                print(df_list) 
                 name = "car_" + str(i) + ".csv"
                 df.to_csv(name) #table to excel
                 readCSV(name, team_num)
