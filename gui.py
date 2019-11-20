@@ -18,7 +18,7 @@ OurTeam = tkinter.IntVar()
 
 def loop_start(teams, OurTeam):
     if (ON):
-        start(teams.get())
+        start(teams.get(), OurTeam.get())
         readNextAndLast(OurTeam.get())
         #print("worked")
     window.after(4000, loop_start, teams, OurTeam)
