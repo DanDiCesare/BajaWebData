@@ -4,6 +4,7 @@ import time
 import csv
 import os
 import tkinter
+import json
 from tkinter.ttk import *
 
 #math for time is working
@@ -68,6 +69,22 @@ def readNextAndLast(teamNum):
                 pass
     #################################
     print("Lead Team:", leadTeam, "-- Time:", leadTime)
+    #~~~~~~~~~~~~~~~~~~~~~~~~~~~WRITING TO JSON~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    data = {}
+    data['Team'] = []
+    data['Team'].append({
+        'Lap': teamLap(teamNum),
+        'Team': teamNum,
+        'Time': str(hours(ourTime)) + ':' + str(minutes(ourTime)) + ':' + str(seconds(ourTime))
+    })
+    data['Team'].append({
+        'Lap': teamLap(leadTeam),
+        'Team': leadTeam,
+        'Time': str(hours(leadTime)) + ':' + str(minutes(leadTime)) + ':' + str(seconds(leadTime))
+    })
+
+    with open ('guiData.json', 'w') as outFile:
+        json.dump(data, outFile)
         
             
 def readCSV(name, i):
@@ -134,6 +151,7 @@ def start(number_of_teams, teamNum):
         
         ourTeamLap = teamLap(teamNum)
         print ("\n\nOur team lap count:", ourTeamLap)
+
         #time.sleep(8)
         #print("\n")
 
