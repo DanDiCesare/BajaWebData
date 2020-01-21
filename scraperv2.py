@@ -5,6 +5,7 @@ import csv
 import os
 import tkinter
 import json
+from leaderboard import leaderBoard
 from tkinter.ttk import *
 
 
@@ -122,6 +123,8 @@ def start(number_of_teams, teamNum):
             os.remove("compare.csv")
         if os.path.exists("compareLap.csv"):
             os.remove("compareLap.csv")
+
+        #leaderBoard()
 
         for i in range(1, number_of_teams + 1):
             team_num = str(i)

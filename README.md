@@ -6,5 +6,6 @@ Download the following to get started:
     - pandas
     - lxml
     - tkinter
+    - selenium
 
 Currently configured for results of http://results.ulmidnightmayhem.com
