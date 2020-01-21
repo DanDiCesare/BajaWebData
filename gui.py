@@ -7,12 +7,13 @@ import tkinter
 import json
 from scraperv2 import *
 from tkinter.ttk import *
+#scrape the whole leaderboard
 
 ##########################Variables###############################
 ON = False
 window = tkinter.Tk()
 window.style = Style()
-window.style.theme_use("alt")
+window.style.theme_use("default")
 teams = tkinter.IntVar()
 OurTeam = tkinter.IntVar()
 ##################################################################
@@ -86,7 +87,7 @@ t = tkinter.Entry(window, textvariable = OurTeam)
 tl = tkinter.Label(window, text = "Our Team #:")
 
 
-start_button = tkinter.Button(window, font='Helvetica 18 bold', text = "Start", fg = "green",command = lambda: on_off() )
+start_button = tkinter.Button(window, font='Helvetica 18 bold', text = "Start", fg = "green", command = lambda: on_off() )
 
 start_button.grid(row = 0, column = 0)
 e.grid(row = 1, column = 1)  

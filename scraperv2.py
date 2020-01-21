@@ -7,11 +7,7 @@ import tkinter
 import json
 from tkinter.ttk import *
 
-#math for time is working
-#change from lap time to passed at: column
-#ignore teams that drop out
-#count laps passed / find a way to parse that
-#github
+
 
 def teamLap(teamNum):
     for line in list(open("compareLap.csv")): #find our time
