@@ -1,6 +1,6 @@
 # BajaWebData
 
-![alt text](https://raw.githubusercontent.com/DanDiCesare/BajaWebData/master/webdata.png?token=AKKI6U2GXIVRAXCD4ANY6H27FMZ4O)
+![alt text](https://github.com/DanDiCesare/BajaWebData/blob/master/webdata.png)
 
 
 Download the following to get started:
